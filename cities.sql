@@ -24,3 +24,25 @@ SELECT
     area,
     ROUND(population::numeric / area, 2) AS density
 FROM sandbox.cities;
+
+DROP TABLE IF EXISTS phones;
+
+CREATE TABLE phones (
+    name VARCHAR(50),
+    manufacturer VARCHAR(50),
+    price INTEGER,
+    units_sold INTEGER
+);
+
+INSERT INTO phones (name, manufacturer, price, units_sold) VALUES
+('N1280', 'Nokia', 199, 1925),
+('iPhone 4', 'Apple', 399, 9460),
+('Galaxy S', 'Samsung', 299, 3590),
+('S5620 Monte', 'Samsung', 250, 9510);
+
+SELECT name, price FROM phones where units_sold > 5000;
+
+update phones set units_sold = 1925 where name = 'N1280';
+
+SELECT * FROM phones;
+
