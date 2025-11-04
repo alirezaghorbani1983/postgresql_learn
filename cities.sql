@@ -46,3 +46,24 @@ update phones set units_sold = 1925 where name = 'N1280';
 
 SELECT * FROM phones;
 
+DROP TABLE IF EXISTS phones;
+
+CREATE TABLE phones (
+    name VARCHAR(50),
+    manufacturer VARCHAR(50),
+    price INTEGER,
+    units_sold INTEGER
+);
+
+INSERT INTO phones (name, manufacturer, price, units_sold) VALUES
+('N1280', 'Nokia', 199, 1925),
+('iPhone 4', 'Apple', 399, 9436),
+('Galaxy S', 'Samsung', 299, 2359),
+('S5620 Monte', 'Samsung', 250, 2835),
+('N8', 'Nokia', 150, 7543),
+('Droid', 'Motorola', 150, 8395);
+
+SELECT name, price from phones
+where units_sold > 5000;
+
+
