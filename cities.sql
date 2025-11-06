@@ -66,5 +66,7 @@ INSERT INTO phones (name, manufacturer, price, units_sold) VALUES
 SELECT name, price from phones
 where units_sold > 5000;
 
+update phones set units_sold = 8523
+where name = 'N8';
 
--- test line --
+SELECT * FROM phones;
